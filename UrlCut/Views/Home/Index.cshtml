@@ -1,0 +1,21 @@
+﻿@model string
+@{
+    ViewData["Title"] = "Home Page";
+}
+@if (Model != null)
+{
+    <div class="alert alert-primary" role="alert">
+        <a href="https://localhost:44398/@Model">https://localhost:44398/@Model</a>
+    </div>
+}
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4">Place your url here to cut it.</h1>
+        <form method="post" asp-action="Create">
+            <div class="form-group">
+                <input name="Link" type="text" class="form-control" id="textLinkInput">
+            </div>
+            <button type="submit" class="btn btn-primary">Cut it!</button>
+        </form>
+    </div>
+</div>
